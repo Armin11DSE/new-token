@@ -1,6 +1,6 @@
 {
-    "name": "Armin",
-    "symbol": "EXMPL",
-    "description": "Example token",
-    "image": ""
+    "name": "DevT",
+    "symbol": "DEVT",
+    "description": "DevT token created using solana cli",
+    "image": "https://raw.githubusercontent.com/ARMIN11DSE/new-token/main/resources/DevT.png"
 }
