@@ -4,7 +4,7 @@
 KEYS_DIR="./keys"
 TOKEN_NAME="DevT"
 TOKEN_SYMBOL="DEVT"
-METADATA_URL="https://raw.githubusercontent.com/ARMIN11DSE/new-token/main/metadata/metadata.json"
+METADATA_URL="https://raw.githubusercontent.com/ARMIN11DSE/solana-new-token/main/metadata/metadata.json"
 SOL_AMOUNT="0.5"
 
 mkdir -p "$KEYS_DIR"
@@ -34,11 +34,11 @@ echo "✅ Token Mint Address: $MNT_ADDRESS"
 
 cd ..
 
-echo "🪙 Creating token using MNT as mint authority..."
-spl-create-token TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb --enable-metadata "$KEYS_DIR/$MNT_KEYPAIR"
+echo "🪙 Creating token..."
+spl-token create-token --program-id TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb --enable-metadata "$KEYS_DIR/$MNT_KEYPAIR"
 
 echo "📦 Initializing metadata..."
-spl-token initialize-metadata "$MNT_ADDRESS" "$TOKEN_NAME" "$TOKEN_SYMBOL" "$METADATA_URL" --mint-authority "$KEYS_DIR/$MNT_KEYPAIR"
+spl-token initialize-metadata "$MNT_ADDRESS" "'$TOKEN_NAME'" "'$TOKEN_SYMBOL'" "$METADATA_URL"
 
 echo "📬 Creating associated token account..."
 spl-token create-account "$MNT_ADDRESS"
