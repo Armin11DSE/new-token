@@ -35,3 +35,7 @@ This project automates the full lifecycle of creating an SPL token on **Solana D
 chmod +x create-and-mint-token.sh
 ./create-and-mint-token.sh
 ```
+
+# Credits
+Based on [Solana Developer Bootcamp 2024 - Learn Blockchain and Full Stack Web3 Development - Projects 1-9
+](https://www.youtube.com/watch?v=amAq-WHAFs8)
